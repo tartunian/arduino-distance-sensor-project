@@ -12,6 +12,10 @@ function storeAndPlotChunk(data,datastore)
     sonic_buffer = [sonic_buffer; sonic];
     timestamp_buffer = [timestamp_buffer; timestamp];
     datastore.addReading(laser,sonic,timestamp);
+    
+%     plot(datastore.totalreadings,laser,'rx');
+%     hold on;
+%     plot(datastore.totalreadings,sonic,'bo');
 
     if(datastore.totalreadings~=0&&mod(datastore.totalreadings,chunk_length)==0)
         laser_chunk = [];

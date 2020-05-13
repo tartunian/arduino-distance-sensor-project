@@ -118,8 +118,8 @@ void setup()
     while (1) {}
   }
   
-  setLongRange();
-  //setDefaultRange();
+  //setLongRange();
+  setDefaultRange();
   //setHighAccuracy();
   //setHighSpeed();
   setDefaultTimingBudget();

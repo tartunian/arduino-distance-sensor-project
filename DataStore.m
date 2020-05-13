@@ -17,8 +17,6 @@ classdef DataStore < handle
             datastore.totalreadings = datastore.totalreadings + 1;
         end
         function c = getColumnMatrix(datastore,column,numreadings)
-%             "Return start: " + string(datastore.totalreadings-numreadings+1)
-%             "Return end  : " + string(datastore.totalreadings)
             c = cell2mat(datastore.data(datastore.totalreadings-numreadings+1:datastore.totalreadings,column));
         end
         function clear(datastore)
